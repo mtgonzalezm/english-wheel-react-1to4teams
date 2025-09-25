@@ -1,0 +1,68 @@
+:root{--bg1:#e6ecff;--bg2:#ffe6f3;--card:#ffffff;--text:#111827;--muted:#6b7280;--accent:#2563eb;--primary:#16a34a;--warn:#f59e0b;--shadow:0 10px 30px rgba(0,0,0,.08);--radius:16px}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:var(--text)}
+.page{min-height:100vh;padding:24px}
+.container{max-width:1100px;margin:0 auto;background:rgba(255,255,255,.95);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}
+.center{text-align:center}
+.stack{display:flex;flex-direction:column;gap:16px}
+.row{display:flex;gap:12px;align-items:center}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr)}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr)}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr)}
+.gap{gap:16px}
+.align-start{align-items:start}
+.big{font-size:48px}
+.small{font-size:14px}
+.tiny{font-size:12px}
+.muted{color:var(--muted)}
+.accent{color:var(--accent)}
+.title{font-weight:700}
+h1{font-size:36px;margin:0}
+h2{margin:0}
+h3{margin:0 0 6px 0}
+.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;border:1px solid #eee}
+.card.active{outline:3px solid var(--accent);background:#eef2ff}
+.card.left{text-align:left}
+.label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.value{font-weight:600}
+.label-inline{font-size:12px;font-weight:700;color:#374151;margin-right:8px}
+.points{font-size:28px}
+.btn{border:1px solid #d1d5db;background:#fff;border-radius:999px;padding:8px 14px;cursor:pointer;box-shadow:var(--shadow)}
+.btn:hover{filter:brightness(1.02)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn.primary{background:var(--primary);color:#fff;border-color:transparent}
+.btn.warn{background:var(--warn);color:#fff;border-color:transparent}
+.btn.lg{padding:12px 22px;font-weight:700}
+.btn-ghost{border-radius:var(--radius);text-align:left;cursor:pointer}
+.input{flex:1;padding:8px 10px;border:1px solid #d1d5db;border-radius:10px}
+.panel{padding:16px;border-radius:12px;background:#f3f4f6;text-align:center;font-size:22px;letter-spacing:.35em}
+.keys{display:flex;flex-wrap:wrap;gap:8px; user-select:none;}
+.key{min-width:36px; font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace !important; text-transform:uppercase; overflow:hidden; white-space:nowrap;}
+.key span{pointer-events:none;}
+.wheel-wrap{display:flex;flex-direction:column;gap:10px;align-items:center}
+.wheel-canvas{border-radius:12px;box-shadow:var(--shadow)}
+.notranslate, .key, .panel, .btn { translate: no; }
+.header-row{display:flex; justify-content:flex-end; gap:8px; margin-bottom:8px;}
+
+
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;z-index:50}
+.modal{background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:16px;max-width:900px;width:95vw;max-height:90vh;overflow:auto}
+.modal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+hr{border:none;border-top:1px solid #eee;margin:12px 0}
+
+
+/* Ensure header buttons always visible */
+.header-row{display:flex; justify-content:flex-end; gap:8px; margin-bottom:8px; position:sticky; top:0; background:transparent; z-index:10}
+/* Portal modal styles */
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;z-index:9999}
+.modal{background:#fff;border-radius:16px;box-shadow:0 20px 70px rgba(0,0,0,.3);padding:16px;max-width:960px;width:95vw;max-height:90vh;overflow:auto}
+.modal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;background:#e0f2fe;color:#0369a1;font-size:12px;font-weight:700}
+
+
+/* Responsive grid for variable team count */
+.grid-auto { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
+
+
+.grid-auto { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;background:#e0f2fe;color:#0369a1;font-size:12px;font-weight:700}
